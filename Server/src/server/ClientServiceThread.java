@@ -48,7 +48,7 @@ class ClientServiceThread extends GlobalServerConstants
             while(m_bRunThread) 
             {                    
                 // read incoming stream 
-                String clientCommand = in.readLine(); 
+                String clientCommand = (String) in.readLine(); 
                 System.out.println("Client Says :" + clientCommand);
 
                 if(!super.ServerOn) 
@@ -72,7 +72,7 @@ class ClientServiceThread extends GlobalServerConstants
                     super.ServerOn = false;
                 } else {
                         // Process it 
-                        out.println("Server Says : " + clientCommand); 
+                        out.println("Server Says : " + "Hello, I am server... "); 
                         out.flush(); 
                 }
             } 
