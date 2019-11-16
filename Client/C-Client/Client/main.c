@@ -18,7 +18,7 @@ void main(){
     int clientSocket;
     struct sockaddr_in serverAddr;
     char buffer[1024];
-    char sendbuffer[1024] = "Hello from client";
+    char sendbuffer[1024] = "Hello from client \r\n";
 
     clientSocket = socket(PF_INET, SOCK_STREAM, 0);
     printf("[+]Client Socket Created Sucessfully.\n");
