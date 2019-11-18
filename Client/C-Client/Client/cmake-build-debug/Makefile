@@ -123,6 +123,33 @@ Client/fast:
 	$(MAKE) -f CMakeFiles/Client.dir/build.make CMakeFiles/Client.dir/build
 .PHONY : Client/fast
 
+json.o: json.c.o
+
+.PHONY : json.o
+
+# target to build an object file
+json.c.o:
+	$(MAKE) -f CMakeFiles/Client.dir/build.make CMakeFiles/Client.dir/json.c.o
+.PHONY : json.c.o
+
+json.i: json.c.i
+
+.PHONY : json.i
+
+# target to preprocess a source file
+json.c.i:
+	$(MAKE) -f CMakeFiles/Client.dir/build.make CMakeFiles/Client.dir/json.c.i
+.PHONY : json.c.i
+
+json.s: json.c.s
+
+.PHONY : json.s
+
+# target to generate assembly for a file
+json.c.s:
+	$(MAKE) -f CMakeFiles/Client.dir/build.make CMakeFiles/Client.dir/json.c.s
+.PHONY : json.c.s
+
 main.o: main.c.o
 
 .PHONY : main.o
@@ -159,6 +186,9 @@ help:
 	@echo "... rebuild_cache"
 	@echo "... Client"
 	@echo "... edit_cache"
+	@echo "... json.o"
+	@echo "... json.i"
+	@echo "... json.s"
 	@echo "... main.o"
 	@echo "... main.i"
 	@echo "... main.s"
