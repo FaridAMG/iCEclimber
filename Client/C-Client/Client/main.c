@@ -13,12 +13,13 @@
 
 #define PORT 8080
 
+
 void main(){
 
     int clientSocket;
     struct sockaddr_in serverAddr;
-    char buffer[1024];
-    char sendbuffer[1024] = "Hello from client \r\n";
+    char buffer[1000000];
+    char sendbuffer[1000000] = "Hello from client \r\n";
 
     clientSocket = socket(PF_INET, SOCK_STREAM, 0);
     printf("[+]Client Socket Created Sucessfully.\n");
@@ -32,29 +33,26 @@ void main(){
     printf("[+]Connected to Server.\n");
 
 
-    int was_it_all = send_all_data(clientSocket,sendbuffer,1024);
-    if(was_it_all == 1){
-        printf("[+] ALL DATA HAS BEEN SENT");
-    } else{
-        printf("[+] NOT ALL DATA HAS BEEN SENT");
+    while (sendbuffer != "close") {
+
+        // gets info from user
+        printf("Enter your message to server : ");
+        scanf("%s", sendbuffer);
+
+        // send_all_data function sends al data available
+        int was_it_all = send(clientSocket, sendbuffer, 1024, 0);
+
+
+        //recv recives all data from client
+        recv(clientSocket, buffer, 1024, 0);
+        printf("[+]Data Recv: %s\n", buffer);
+
     }
 
 
-    recv(clientSocket, buffer, 1024, 0);
-    printf("[+]Data Recv: %s\n", buffer);
     printf("[+]Closing the connection.\n");
 
 }
 
 
-int send_all_data(int socket, void *buffer, size_t length){
-    char *ptr = (char*) buffer;
-    while (length > 0)
-    {
-        int i = send(socket, ptr, length, 0);
-        if (i < 1) return 0;
-        ptr += i;
-        length -= i;
-    }
-    return 1;
-}
+

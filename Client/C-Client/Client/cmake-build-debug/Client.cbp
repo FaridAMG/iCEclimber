@@ -78,6 +78,9 @@
 				</MakeCommands>
 			</Target>
 		</Build>
+		<Unit filename="/home/farid/Documents/LenguajesProgs/iCEclimber/iCEclimber/Client/C-Client/Client/json.c">
+			<Option target="Client"/>
+		</Unit>
 		<Unit filename="/home/farid/Documents/LenguajesProgs/iCEclimber/iCEclimber/Client/C-Client/Client/main.c">
 			<Option target="Client"/>
 		</Unit>
