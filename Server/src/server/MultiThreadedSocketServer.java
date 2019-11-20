@@ -6,8 +6,10 @@ import java.net.ServerSocket;
 import java.net.Socket;
 import java.text.SimpleDateFormat;
 import java.util.Calendar;
+import java.util.List;
 
 import Json.JsonUtil;
+import Json.coordinates;
  
  
 public class MultiThreadedSocketServer extends  GlobalServerConstants   {
@@ -90,6 +92,11 @@ public class MultiThreadedSocketServer extends  GlobalServerConstants   {
     { 
         
     	JsonUtil jsut = new JsonUtil(20,20);
+    	jsut.ConsolePrintGameMatrix();
+    	jsut.ChangeElementInPos(10, 5, 3);
+    	jsut.GetElementInPos(10, 6);
+    	List<coordinates> ele = jsut.GetCoordinatesOfElements(3);
+		System.out.println(ele.get(0).xpos + " , " + ele.get(0).ypos);
     	jsut.ConsolePrintGameMatrix();
     	//new MultiThreadedSocketServer();        
     } 
