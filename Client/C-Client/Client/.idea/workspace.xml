@@ -5,7 +5,7 @@
       <config projectName="Client" targetName="Client" />
     </generated>
   </component>
-  <component name="CMakeSettings">
+  <component name="CMakeSettings" AUTO_RELOAD="true">
     <configurations>
       <configuration PROFILE_NAME="Debug" CONFIG_NAME="Debug" />
     </configurations>
@@ -29,6 +29,7 @@
   <component name="ProjectLevelVcsManager" settingsEditedManually="true" />
   <component name="PropertiesComponent">
     <property name="WebServerToolWindowFactoryState" value="false" />
+    <property name="last_opened_file_path" value="$PROJECT_DIR$/../../../../../TryGame" />
     <property name="node.js.detected.package.eslint" value="true" />
     <property name="node.js.detected.package.tslint" value="true" />
     <property name="node.js.path.for.package.eslint" value="project" />
@@ -67,6 +68,7 @@
       <updated>1573855531618</updated>
       <workItem from="1573855537998" duration="4980000" />
       <workItem from="1574103414314" duration="3127000" />
+      <workItem from="1574225908289" duration="2053000" />
     </task>
     <servers />
   </component>
