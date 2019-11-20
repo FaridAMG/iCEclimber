@@ -6,6 +6,8 @@ import java.net.ServerSocket;
 import java.net.Socket;
 import java.text.SimpleDateFormat;
 import java.util.Calendar;
+
+import Json.JsonUtil;
  
  
 public class MultiThreadedSocketServer extends  GlobalServerConstants   {
@@ -86,7 +88,10 @@ public class MultiThreadedSocketServer extends  GlobalServerConstants   {
  
     public static void main (String[] args) 
     { 
-        new MultiThreadedSocketServer();        
+        
+    	JsonUtil jsut = new JsonUtil(1000,1000);
+    	jsut.ConsolePrintGameMatrix();
+    	//new MultiThreadedSocketServer();        
     } 
 }
     
