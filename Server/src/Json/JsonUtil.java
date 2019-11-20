@@ -78,7 +78,6 @@ public class JsonUtil  {
 	
 	public List<coordinates> GetCoordinatesOfElements(int element) {
 		List<coordinates> ele = new ArrayList<coordinates>();
-		coordinates coord = new coordinates();	
 		JSONArray ex = new JSONArray();
 		JSONObject uy = new JSONObject();
 		
@@ -90,6 +89,7 @@ public class JsonUtil  {
 			for(int y = 0; y != this.ypos;y++) {
 				
 				if(element == (int) uy.get(y) ) {
+					coordinates coord = new coordinates();	
 					coord.xpos = x;
 					coord.ypos = y;
 					ele.add(coord);

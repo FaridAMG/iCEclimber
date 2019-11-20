@@ -94,9 +94,11 @@ public class MultiThreadedSocketServer extends  GlobalServerConstants   {
     	JsonUtil jsut = new JsonUtil(20,20);
     	jsut.ConsolePrintGameMatrix();
     	jsut.ChangeElementInPos(10, 5, 3);
-    	jsut.GetElementInPos(10, 6);
-    	List<coordinates> ele = jsut.GetCoordinatesOfElements(3);
-		System.out.println(ele.get(0).xpos + " , " + ele.get(0).ypos);
+    	jsut.ChangeElementInPos(9, 7, 3);
+    	List<coordinates> ele = jsut.GetCoordinatesOfElements(0);
+    	ele.forEach((coor) -> {
+			System.out.println("(" + coor.xpos + " , " + coor.ypos + ")");
+		});
     	jsut.ConsolePrintGameMatrix();
     	//new MultiThreadedSocketServer();        
     } 
