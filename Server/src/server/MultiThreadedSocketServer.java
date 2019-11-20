@@ -89,7 +89,7 @@ public class MultiThreadedSocketServer extends  GlobalServerConstants   {
     public static void main (String[] args) 
     { 
         
-    	JsonUtil jsut = new JsonUtil(1000,1000);
+    	JsonUtil jsut = new JsonUtil(20,20);
     	jsut.ConsolePrintGameMatrix();
     	//new MultiThreadedSocketServer();        
     } 
