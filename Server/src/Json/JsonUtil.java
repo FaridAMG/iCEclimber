@@ -19,6 +19,9 @@ public class JsonUtil  {
 	
 	// GameMatrix Variables
 	JSONObject GameMatrix = new JSONObject();
+	
+
+
 	int xpos;
 	int ypos;
 	
@@ -29,6 +32,11 @@ public class JsonUtil  {
 		createTemplate();
 	}
 	
+	
+	public JSONObject getGameMatrix() {
+		return GameMatrix;
+	}
+
 	
 	public int getMatrixWidth() {
 		return xpos;

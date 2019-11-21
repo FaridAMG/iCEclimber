@@ -346,6 +346,13 @@ public class IceClimberGame {
 	
 	
 	
+	public String getJsonMatrix() {
+		
+		return this.JsonGameMatrix.getGameMatrix().toString() ;
+		
+	}
+	
+	
 }
 
 
