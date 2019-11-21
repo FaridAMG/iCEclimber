@@ -8,6 +8,7 @@ import java.text.SimpleDateFormat;
 import java.util.Calendar;
 import java.util.List;
 
+import Json.ClientJsonReader;
 import Json.JsonUtil;
 import Json.coordinates;
  
@@ -91,18 +92,64 @@ public class MultiThreadedSocketServer extends  GlobalServerConstants   {
     public static void main (String[] args) 
     { 
         
-    	JsonUtil jsut = new JsonUtil(20,20);
-    	jsut.ConsolePrintGameMatrix();
-    	jsut.ChangeElementInPos(10, 5, 3);
-    	jsut.ChangeElementInPos(9, 7, 3);
-    	List<coordinates> ele = jsut.GetCoordinatesOfElements(0);
-    	ele.forEach((coor) -> {
-			System.out.println("(" + coor.xpos + " , " + coor.ypos + ")");
-		});
-    	jsut.ConsolePrintGameMatrix();
-    	//new MultiThreadedSocketServer();        
+    	new MultiThreadedSocketServer();  
+    	
     } 
 }
     
     
+
+
+
+
+
+
+
+//
+// PRUEBAS DE LOS LECTORES Y ESCRITORES DE JSON
+//
+
+
+//JsonUtil jsut = new JsonUtil(20,20);
+//jsut.ConsolePrintGameMatrix();
+//jsut.ChangeElementInPos(10, 5, 3);
+//jsut.ChangeElementInPos(9, 7, 3);
+//List<coordinates> ele = jsut.GetCoordinatesOfElements(0);
+//ele.forEach((coor) -> {
+
+//	ClientJsonReader jsonrdr = new ClientJsonReader();
+//	jsonrdr.insertClientMessage("{\n" + 
+//			"\n" + 
+//			"	\"4\": [{\n" + 
+//			"		\"at\": 1,\n" + 
+//			"		\"equis\": 1,\n" + 
+//			"		\"ye\": -1,\n" + 
+//			"		\"vis\": -1\n" + 
+//			"	}],\n" + 
+//			"\n" + 
+//			"	\"5\": [{\n" + 
+//			"		\"at\": 0,\n" + 
+//			"		\"equis\": -1,\n" + 
+//			"		\"ye\": -1,\n" + 
+//			"		\"vis\": -1\n" + 
+//			"	}]\n" + 
+//			"\n" + 
+//			"\n" + 
+//			"}");
+//	
+//	System.out.println("Popo atack..:  " + jsonrdr.seeAtack(4));
+//	System.out.println("Nana atack...:  " + jsonrdr.seeAtack(5));
+	
+//	System.out.println("Popo x Mov...:  " + jsonrdr.seeXmovment(4));
+//	System.out.println("Nana x Mov  " + jsonrdr.seeXmovment(5));
+//	
+//	System.out.println("Popo y Mov...:  " + jsonrdr.seeYmovment(4));
+//	System.out.println("Nana y Mov...:  " + jsonrdr.seeYmovment(5));
+//	
+//	System.out.println("Popo Vision...:  " + jsonrdr.seeVision(4));
+//	System.out.println("Nana Vision...:  " + jsonrdr.seeVision(5));
+	
+//});
+//jsut.ConsolePrintGameMatrix();
+
     
