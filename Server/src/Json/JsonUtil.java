@@ -29,6 +29,16 @@ public class JsonUtil  {
 		createTemplate();
 	}
 	
+	
+	public int getMatrixWidth() {
+		return xpos;
+	}
+
+	public int getMatrixHeight() {
+		return ypos;
+	}
+	
+	
 	private void createTemplate() {
 		for(int x=0;x!=this.xpos; x++) {
 	        JSONArray list = new JSONArray();
@@ -52,7 +62,7 @@ public class JsonUtil  {
 			ex = (JSONArray) this.GameMatrix.get(xpos);
 			uy = (JSONObject) ex.get(0);
 			int element = (int) uy.get(ypos);
-			System.out.println(element);
+			//System.out.println(element);
 			return element;	
 		}else {
 			System.out.println("[-0-] ERROR IN ELEMENTINPOS (JSonUtil.java)");
@@ -74,6 +84,18 @@ public class JsonUtil  {
 			System.out.println("[-0-] ERROR IN ELEMENTINPOS (JSonUtil.java)");
 		}
 			
+	}
+	
+	public boolean doesElementExist(int element) {
+		List<coordinates> ele = new ArrayList<coordinates>();
+		ele = this.GetCoordinatesOfElements(element);
+		
+		if(ele.isEmpty() == false) {
+			return true;
+		}else {
+			return false;
+		}
+		
 	}
 	
 	public List<coordinates> GetCoordinatesOfElements(int element) {

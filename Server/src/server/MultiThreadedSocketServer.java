@@ -11,6 +11,7 @@ import java.util.List;
 import Json.ClientJsonReader;
 import Json.JsonUtil;
 import Json.coordinates;
+import game.IceClimberGame;
  
  
 public class MultiThreadedSocketServer extends  GlobalServerConstants   {
@@ -92,7 +93,11 @@ public class MultiThreadedSocketServer extends  GlobalServerConstants   {
     public static void main (String[] args) 
     { 
         
-    	new MultiThreadedSocketServer();  
+    	IceClimberGame game = new IceClimberGame(20,20);
+    
+    	game.JsonGameMatrix.ConsolePrintGameMatrix();
+    	
+    	//new MultiThreadedSocketServer();  
     	
     } 
 }
