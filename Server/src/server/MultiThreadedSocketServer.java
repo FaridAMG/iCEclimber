@@ -97,6 +97,11 @@ public class MultiThreadedSocketServer extends  GlobalServerConstants   {
     
     	game.JsonGameMatrix.ConsolePrintGameMatrix();
     	
+    	game.moveNPCs();
+    	
+    	game.JsonGameMatrix.ConsolePrintGameMatrix();
+
+    	
     	//new MultiThreadedSocketServer();  
     	
     } 
