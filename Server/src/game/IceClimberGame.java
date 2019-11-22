@@ -193,8 +193,6 @@ public class IceClimberGame {
 		
 	}
 	
-	
-	
 	private void moveBird() {
 	}
 	

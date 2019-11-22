@@ -169,13 +169,12 @@ json_object* createJson(int x1, int y1, int attack1, int vision1, int x2, int y2
 
 void main(){
 
-    json_object* jobj = createJson( 1, 0, 0, 1,1, 0, 0, 1);
 
 
 
     int clientSocket;
     struct sockaddr_in serverAddr;
-    char buffer[1000000];
+    char buffer[2000];
 
     clientSocket = socket(PF_INET, SOCK_STREAM, 0);
     printf("[+]Client Socket Created Sucessfully.\n");
@@ -191,8 +190,9 @@ void main(){
     int loop = 0;
 
     while (loop != 4) {
+        json_object* jobj = createJson( 0, 0, 0, 0,0, 0, 0, 0);
 
-        char sendbuffer[100];   // array to hold the result.
+        char sendbuffer[86];   // array to hold the result.
         strcpy(sendbuffer,json_object_to_json_string_ext(jobj,JSON_C_TO_STRING_PLAIN )); // copy string one into the result.
         strcat(sendbuffer,"\r\n");
         removeSpaces(sendbuffer);
@@ -201,12 +201,13 @@ void main(){
 
 
         // send_all_data function sends al data available
-        int was_it_all = send(clientSocket, sendbuffer, 1024, 0);
+        int was_it_all = send(clientSocket, sendbuffer, 86, 0);
 
 
         //recv recives all data from client
-        recv(clientSocket, buffer, 1024, 0);
+        recv(clientSocket, buffer, 2000, 0);
         printf("[+]Data Recv: %s\n", buffer);
+
 
         loop ++;
     }

@@ -7,6 +7,8 @@ import java.io.OutputStreamWriter;
 import java.io.PrintWriter;
 import java.net.Socket;
 
+import game.IceClimberGame;
+
 
 
 
@@ -33,6 +35,12 @@ class ClientServiceThread extends GlobalServerConstants
         // and a PrintWriter as shown below. 
         BufferedReader in = null; 
         PrintWriter out = null; 
+        
+        //INSTANTIATES THE GAME
+         IceClimberGame game = new IceClimberGame(20,20);		  
+		  
+        
+        
 
         // Print out details of this connection 
         System.out.println("Accepted Client Address - " + myClientSocket.getInetAddress().getHostName()); 
@@ -51,7 +59,9 @@ class ClientServiceThread extends GlobalServerConstants
                 String clientCommand = (String) in.readLine(); 
                 clientCommand = clientCommand.replace("[\"", "[");
                 clientCommand = clientCommand.replace("\"]", "]");
-                System.out.println("Client Says :" + clientCommand);
+                System.out.println(clientCommand);
+                game.actionPopoAndNana(clientCommand);
+                game.moveNPCs();
 
                 if(!super.ServerOn) 
                 { 
@@ -74,7 +84,7 @@ class ClientServiceThread extends GlobalServerConstants
                     super.ServerOn = false;
                 } else {
                         // Process it 
-                        out.println("Server Says : " + "Hello, I am server... "); 
+                        out.print(game.getJsonMatrix()); 
                         out.flush(); 
                 }
             } 
