@@ -93,16 +93,18 @@ public class MultiThreadedSocketServer extends  GlobalServerConstants   {
     public static void main (String[] args) 
     { 
         
-    	IceClimberGame game = new IceClimberGame(20,20);
-    
-    	game.JsonGameMatrix.ConsolePrintGameMatrix();
-    	
-    	game.moveNPCs();
-    	
-    	game.JsonGameMatrix.ConsolePrintGameMatrix();
+		/*
+		 * IceClimberGame game = new IceClimberGame(20,20);
+		 * 
+		 * game.JsonGameMatrix.ConsolePrintGameMatrix();
+		 * 
+		 * game.moveNPCs();
+		 * 
+		 * game.JsonGameMatrix.ConsolePrintGameMatrix();
+		 */
 
     	
-    	//new MultiThreadedSocketServer();  
+    	new MultiThreadedSocketServer();  
     	
     } 
 }

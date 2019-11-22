@@ -33,4 +33,8 @@ json.c
 /home/farid/Documents/LenguajesProgs/iCEclimber/iCEclimber/Client/C-Client/Client/json.c
 json-c/json.h
 -
+json_object_private.h
+-
+
+/usr/include/json-c/json_object_private.h
 

@@ -5,4 +5,5 @@ CMakeFiles/Client.dir/json.c.o: ../json.c
 
 CMakeFiles/Client.dir/main.c.o: ../json.c
 CMakeFiles/Client.dir/main.c.o: ../main.c
+CMakeFiles/Client.dir/main.c.o: /usr/include/json-c/json_object_private.h
 

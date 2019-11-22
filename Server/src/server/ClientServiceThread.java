@@ -49,6 +49,8 @@ class ClientServiceThread extends GlobalServerConstants
             {                    
                 // read incoming stream 
                 String clientCommand = (String) in.readLine(); 
+                clientCommand = clientCommand.replace("[\"", "[");
+                clientCommand = clientCommand.replace("\"]", "]");
                 System.out.println("Client Says :" + clientCommand);
 
                 if(!super.ServerOn) 
