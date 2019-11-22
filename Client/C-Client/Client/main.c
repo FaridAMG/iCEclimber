@@ -164,7 +164,27 @@ json_object* createJson(int x1, int y1, int attack1, int vision1, int x2, int y2
 }
 
 
-
+int* parse_json_pos(json_object* jobj, char* str) {
+  int arr[2] = [];
+  enum json_type type;
+  json_object_object_foreach(jobj, key, val) {
+    if (key == str) {
+      json_object_object_foreach(json_object_new_object(val), key, val) {
+        type = json_object_get_type(val);
+        switch (type) {
+          case json_type_array:
+          if (key == "equis") {
+            arr[0] = json_object_get_int(val);
+          } else if (key == "ye") {
+            arr[1] = json_object_get_int(val);
+          }
+          break;
+        }
+      }
+    }
+  }
+  return arr;
+}
 
 
 void main(){
@@ -216,6 +236,3 @@ void main(){
     printf("[+]Closing the connection.\n");
 
 }
-
-
-
