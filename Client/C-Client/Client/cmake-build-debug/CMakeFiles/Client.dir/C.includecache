@@ -7,9 +7,9 @@
 #IncludeRegexTransform: 
 
 /home/farid/Documents/LenguajesProgs/iCEclimber/iCEclimber/Client/C-Client/Client/json.c
-json-c/json.h
--
 stdio.h
+-
+json-c/json.h
 -
 
 /home/farid/Documents/LenguajesProgs/iCEclimber/iCEclimber/Client/C-Client/Client/main.c
@@ -29,8 +29,8 @@ arpa/inet.h
 -
 stdbool.h
 -
-json-c/json_object.h
--
 json.c
 /home/farid/Documents/LenguajesProgs/iCEclimber/iCEclimber/Client/C-Client/Client/json.c
+json-c/json.h
+-
 

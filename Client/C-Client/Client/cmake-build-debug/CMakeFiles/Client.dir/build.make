@@ -94,6 +94,7 @@ Client_EXTERNAL_OBJECTS =
 Client: CMakeFiles/Client.dir/main.c.o
 Client: CMakeFiles/Client.dir/json.c.o
 Client: CMakeFiles/Client.dir/build.make
+Client: /usr/lib/x86_64-linux-gnu/libjson-c.so
 Client: CMakeFiles/Client.dir/link.txt
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --bold --progress-dir=/home/farid/Documents/LenguajesProgs/iCEclimber/iCEclimber/Client/C-Client/Client/cmake-build-debug/CMakeFiles --progress-num=$(CMAKE_PROGRESS_3) "Linking C executable Client"
 	$(CMAKE_COMMAND) -E cmake_link_script CMakeFiles/Client.dir/link.txt --verbose=$(VERBOSE)
