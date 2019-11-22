@@ -10,13 +10,20 @@
 #include <netinet/in.h>
 #include <arpa/inet.h>
 #include <stdbool.h>
+#include <json-c/json_object.h>
+#include "json.c"
 
 #define PORT 8080
 
 
 void main(){
 
-    int clientSocket;
+    json_object* jobj = createNewJson(4, 1, 0, 0, 1);
+    printf("The JSON created is: %s\n", json_object_to_json_string(jobj));
+
+
+
+   /* int clientSocket;
     struct sockaddr_in serverAddr;
     char buffer[1000000];
     char sendbuffer[1000000] = "Hello from client \r\n";
@@ -51,7 +58,7 @@ void main(){
 
 
     printf("[+]Closing the connection.\n");
-
+*/
 }
 
 
