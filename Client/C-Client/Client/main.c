@@ -174,7 +174,7 @@ void main(){
 
     int clientSocket;
     struct sockaddr_in serverAddr;
-    char buffer[2000];
+    char buffer[1025];
 
     clientSocket = socket(PF_INET, SOCK_STREAM, 0);
     printf("[+]Client Socket Created Sucessfully.\n");
@@ -205,8 +205,8 @@ void main(){
 
 
         //recv recives all data from client
-        recv(clientSocket, buffer, 2000, 0);
-        printf("[+]Data Recv: %s\n", buffer);
+        recv(clientSocket, buffer, 1025, 0);
+        printf("[+]Data Recv: %s\n",buffer );
 
 
         loop ++;
