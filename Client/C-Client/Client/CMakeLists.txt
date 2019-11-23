@@ -17,7 +17,7 @@ pkg_check_modules(MY_PKG REQUIRED IMPORTED_TARGET json-c)
 
 
 
-add_executable(Client main.c json.c )
+add_executable(Client main.c cJSON.c )
 
 # inform the linker about this program's dependencies
 target_link_libraries(Client

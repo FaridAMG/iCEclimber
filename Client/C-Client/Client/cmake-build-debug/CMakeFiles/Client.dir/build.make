@@ -43,10 +43,10 @@ RM = /snap/clion/92/bin/cmake/linux/bin/cmake -E remove -f
 EQUALS = =
 
 # The top-level source directory on which CMake was run.
-CMAKE_SOURCE_DIR = /home/farid/Documents/LenguajesProgs/iCEclimber/iCEclimber/Client/C-Client/Client
+CMAKE_SOURCE_DIR = /home/zuckerberg/Desktop/iCEclimber/Client/C-Client/Client
 
 # The top-level build directory on which CMake was run.
-CMAKE_BINARY_DIR = /home/farid/Documents/LenguajesProgs/iCEclimber/iCEclimber/Client/C-Client/Client/cmake-build-debug
+CMAKE_BINARY_DIR = /home/zuckerberg/Desktop/iCEclimber/Client/C-Client/Client/cmake-build-debug
 
 # Include any dependencies generated for this target.
 include CMakeFiles/Client.dir/depend.make
@@ -59,44 +59,44 @@ include CMakeFiles/Client.dir/flags.make
 
 CMakeFiles/Client.dir/main.c.o: CMakeFiles/Client.dir/flags.make
 CMakeFiles/Client.dir/main.c.o: ../main.c
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/farid/Documents/LenguajesProgs/iCEclimber/iCEclimber/Client/C-Client/Client/cmake-build-debug/CMakeFiles --progress-num=$(CMAKE_PROGRESS_1) "Building C object CMakeFiles/Client.dir/main.c.o"
-	/usr/bin/cc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -o CMakeFiles/Client.dir/main.c.o   -c /home/farid/Documents/LenguajesProgs/iCEclimber/iCEclimber/Client/C-Client/Client/main.c
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/zuckerberg/Desktop/iCEclimber/Client/C-Client/Client/cmake-build-debug/CMakeFiles --progress-num=$(CMAKE_PROGRESS_1) "Building C object CMakeFiles/Client.dir/main.c.o"
+	/usr/bin/cc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -o CMakeFiles/Client.dir/main.c.o   -c /home/zuckerberg/Desktop/iCEclimber/Client/C-Client/Client/main.c
 
 CMakeFiles/Client.dir/main.c.i: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing C source to CMakeFiles/Client.dir/main.c.i"
-	/usr/bin/cc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -E /home/farid/Documents/LenguajesProgs/iCEclimber/iCEclimber/Client/C-Client/Client/main.c > CMakeFiles/Client.dir/main.c.i
+	/usr/bin/cc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -E /home/zuckerberg/Desktop/iCEclimber/Client/C-Client/Client/main.c > CMakeFiles/Client.dir/main.c.i
 
 CMakeFiles/Client.dir/main.c.s: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling C source to assembly CMakeFiles/Client.dir/main.c.s"
-	/usr/bin/cc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -S /home/farid/Documents/LenguajesProgs/iCEclimber/iCEclimber/Client/C-Client/Client/main.c -o CMakeFiles/Client.dir/main.c.s
+	/usr/bin/cc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -S /home/zuckerberg/Desktop/iCEclimber/Client/C-Client/Client/main.c -o CMakeFiles/Client.dir/main.c.s
 
-CMakeFiles/Client.dir/json.c.o: CMakeFiles/Client.dir/flags.make
-CMakeFiles/Client.dir/json.c.o: ../json.c
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/farid/Documents/LenguajesProgs/iCEclimber/iCEclimber/Client/C-Client/Client/cmake-build-debug/CMakeFiles --progress-num=$(CMAKE_PROGRESS_2) "Building C object CMakeFiles/Client.dir/json.c.o"
-	/usr/bin/cc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -o CMakeFiles/Client.dir/json.c.o   -c /home/farid/Documents/LenguajesProgs/iCEclimber/iCEclimber/Client/C-Client/Client/json.c
+CMakeFiles/Client.dir/cJSON.c.o: CMakeFiles/Client.dir/flags.make
+CMakeFiles/Client.dir/cJSON.c.o: ../cJSON.c
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/zuckerberg/Desktop/iCEclimber/Client/C-Client/Client/cmake-build-debug/CMakeFiles --progress-num=$(CMAKE_PROGRESS_2) "Building C object CMakeFiles/Client.dir/cJSON.c.o"
+	/usr/bin/cc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -o CMakeFiles/Client.dir/cJSON.c.o   -c /home/zuckerberg/Desktop/iCEclimber/Client/C-Client/Client/cJSON.c
 
-CMakeFiles/Client.dir/json.c.i: cmake_force
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing C source to CMakeFiles/Client.dir/json.c.i"
-	/usr/bin/cc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -E /home/farid/Documents/LenguajesProgs/iCEclimber/iCEclimber/Client/C-Client/Client/json.c > CMakeFiles/Client.dir/json.c.i
+CMakeFiles/Client.dir/cJSON.c.i: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing C source to CMakeFiles/Client.dir/cJSON.c.i"
+	/usr/bin/cc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -E /home/zuckerberg/Desktop/iCEclimber/Client/C-Client/Client/cJSON.c > CMakeFiles/Client.dir/cJSON.c.i
 
-CMakeFiles/Client.dir/json.c.s: cmake_force
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling C source to assembly CMakeFiles/Client.dir/json.c.s"
-	/usr/bin/cc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -S /home/farid/Documents/LenguajesProgs/iCEclimber/iCEclimber/Client/C-Client/Client/json.c -o CMakeFiles/Client.dir/json.c.s
+CMakeFiles/Client.dir/cJSON.c.s: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling C source to assembly CMakeFiles/Client.dir/cJSON.c.s"
+	/usr/bin/cc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -S /home/zuckerberg/Desktop/iCEclimber/Client/C-Client/Client/cJSON.c -o CMakeFiles/Client.dir/cJSON.c.s
 
 # Object files for target Client
 Client_OBJECTS = \
 "CMakeFiles/Client.dir/main.c.o" \
-"CMakeFiles/Client.dir/json.c.o"
+"CMakeFiles/Client.dir/cJSON.c.o"
 
 # External object files for target Client
 Client_EXTERNAL_OBJECTS =
 
 Client: CMakeFiles/Client.dir/main.c.o
-Client: CMakeFiles/Client.dir/json.c.o
+Client: CMakeFiles/Client.dir/cJSON.c.o
 Client: CMakeFiles/Client.dir/build.make
 Client: /usr/lib/x86_64-linux-gnu/libjson-c.so
 Client: CMakeFiles/Client.dir/link.txt
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --bold --progress-dir=/home/farid/Documents/LenguajesProgs/iCEclimber/iCEclimber/Client/C-Client/Client/cmake-build-debug/CMakeFiles --progress-num=$(CMAKE_PROGRESS_3) "Linking C executable Client"
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --bold --progress-dir=/home/zuckerberg/Desktop/iCEclimber/Client/C-Client/Client/cmake-build-debug/CMakeFiles --progress-num=$(CMAKE_PROGRESS_3) "Linking C executable Client"
 	$(CMAKE_COMMAND) -E cmake_link_script CMakeFiles/Client.dir/link.txt --verbose=$(VERBOSE)
 
 # Rule to build all files generated by this target.
@@ -109,6 +109,6 @@ CMakeFiles/Client.dir/clean:
 .PHONY : CMakeFiles/Client.dir/clean
 
 CMakeFiles/Client.dir/depend:
-	cd /home/farid/Documents/LenguajesProgs/iCEclimber/iCEclimber/Client/C-Client/Client/cmake-build-debug && $(CMAKE_COMMAND) -E cmake_depends "Unix Makefiles" /home/farid/Documents/LenguajesProgs/iCEclimber/iCEclimber/Client/C-Client/Client /home/farid/Documents/LenguajesProgs/iCEclimber/iCEclimber/Client/C-Client/Client /home/farid/Documents/LenguajesProgs/iCEclimber/iCEclimber/Client/C-Client/Client/cmake-build-debug /home/farid/Documents/LenguajesProgs/iCEclimber/iCEclimber/Client/C-Client/Client/cmake-build-debug /home/farid/Documents/LenguajesProgs/iCEclimber/iCEclimber/Client/C-Client/Client/cmake-build-debug/CMakeFiles/Client.dir/DependInfo.cmake --color=$(COLOR)
+	cd /home/zuckerberg/Desktop/iCEclimber/Client/C-Client/Client/cmake-build-debug && $(CMAKE_COMMAND) -E cmake_depends "Unix Makefiles" /home/zuckerberg/Desktop/iCEclimber/Client/C-Client/Client /home/zuckerberg/Desktop/iCEclimber/Client/C-Client/Client /home/zuckerberg/Desktop/iCEclimber/Client/C-Client/Client/cmake-build-debug /home/zuckerberg/Desktop/iCEclimber/Client/C-Client/Client/cmake-build-debug /home/zuckerberg/Desktop/iCEclimber/Client/C-Client/Client/cmake-build-debug/CMakeFiles/Client.dir/DependInfo.cmake --color=$(COLOR)
 .PHONY : CMakeFiles/Client.dir/depend
 

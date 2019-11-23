@@ -11,23 +11,34 @@ import game.IceClimberGame;
 
 
 
-
+/**
+ * 
+ * @author zuckerberg
+ *
+ */
 class ClientServiceThread extends GlobalServerConstants
 { 
     Socket myClientSocket;
     boolean m_bRunThread = true; 
-
+    /**
+     * 
+     */
     public ClientServiceThread() 
     { 
         super(); 
     } 
-
+    /**
+     * 
+     * @param s
+     */
     ClientServiceThread(Socket s) 
     { 
         myClientSocket = s; 
 
     } 
-
+    /**
+     * 
+     */
     public void run() 
     {            
         // Obtain the input stream and the output stream for the socket 

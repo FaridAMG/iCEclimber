@@ -13,12 +13,16 @@ import Json.JsonUtil;
 import Json.coordinates;
 import game.IceClimberGame;
  
- 
+/**
+ * 
+ */
 public class MultiThreadedSocketServer extends  GlobalServerConstants   {
  
     ServerSocket myServerSocket;
  
- 
+    /**
+     * 
+     */
     public MultiThreadedSocketServer() 
     { 
         try
@@ -89,7 +93,10 @@ public class MultiThreadedSocketServer extends  GlobalServerConstants   {
  
  
     } 
- 
+    /**
+     * 
+     * @param args
+     */
     public static void main (String[] args) 
     { 
         

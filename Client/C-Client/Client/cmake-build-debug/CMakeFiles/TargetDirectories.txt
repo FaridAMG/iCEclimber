@@ -1,3 +1,3 @@
-/home/farid/Documents/LenguajesProgs/iCEclimber/iCEclimber/Client/C-Client/Client/cmake-build-debug/CMakeFiles/rebuild_cache.dir
-/home/farid/Documents/LenguajesProgs/iCEclimber/iCEclimber/Client/C-Client/Client/cmake-build-debug/CMakeFiles/Client.dir
-/home/farid/Documents/LenguajesProgs/iCEclimber/iCEclimber/Client/C-Client/Client/cmake-build-debug/CMakeFiles/edit_cache.dir
+/home/zuckerberg/Desktop/iCEclimber/Client/C-Client/Client/cmake-build-debug/CMakeFiles/rebuild_cache.dir
+/home/zuckerberg/Desktop/iCEclimber/Client/C-Client/Client/cmake-build-debug/CMakeFiles/Client.dir
+/home/zuckerberg/Desktop/iCEclimber/Client/C-Client/Client/cmake-build-debug/CMakeFiles/edit_cache.dir

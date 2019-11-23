@@ -1,4 +1,4 @@
-# Install script for directory: /home/farid/Documents/LenguajesProgs/iCEclimber/iCEclimber/Client/C-Client/Client
+# Install script for directory: /home/zuckerberg/Desktop/iCEclimber/Client/C-Client/Client
 
 # Set the install prefix
 if(NOT DEFINED CMAKE_INSTALL_PREFIX)
@@ -45,5 +45,5 @@ endif()
 
 string(REPLACE ";" "\n" CMAKE_INSTALL_MANIFEST_CONTENT
        "${CMAKE_INSTALL_MANIFEST_FILES}")
-file(WRITE "/home/farid/Documents/LenguajesProgs/iCEclimber/iCEclimber/Client/C-Client/Client/cmake-build-debug/${CMAKE_INSTALL_MANIFEST}"
+file(WRITE "/home/zuckerberg/Desktop/iCEclimber/Client/C-Client/Client/cmake-build-debug/${CMAKE_INSTALL_MANIFEST}"
      "${CMAKE_INSTALL_MANIFEST_CONTENT}")

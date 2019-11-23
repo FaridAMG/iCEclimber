@@ -1,1 +1,1 @@
-/usr/bin/cc -g   CMakeFiles/Client.dir/main.c.o CMakeFiles/Client.dir/json.c.o  -o Client /usr/lib/x86_64-linux-gnu/libjson-c.so 
+/usr/bin/cc -g   CMakeFiles/Client.dir/main.c.o CMakeFiles/Client.dir/cJSON.c.o  -o Client /usr/lib/x86_64-linux-gnu/libjson-c.so 

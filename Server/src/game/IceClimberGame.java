@@ -13,14 +13,20 @@ public class IceClimberGame {
 	//
 	public JsonUtil JsonGameMatrix;
 	public ClientJsonReader clientJReader = new ClientJsonReader();
-	
+	/**
+	 * 
+	 * @param gameMatrxWidth
+	 * @param gameMatrxHeight
+	 */
 	public IceClimberGame(int gameMatrxWidth,int gameMatrxHeight) {
 		super();
 		this.JsonGameMatrix = new JsonUtil(gameMatrxWidth,gameMatrxHeight);
 		sculpInitialMatrix();
 	}
 	
-	
+	/**
+	 * 
+	 */
 	private void sculpInitialMatrix() {
 		int MatrixWidth = this.JsonGameMatrix.getMatrixWidth();
 		int MatrixHeight = this.JsonGameMatrix.getMatrixHeight();
@@ -43,7 +49,9 @@ public class IceClimberGame {
 		
 	}
 	
-	
+	/**
+	 * 
+	 */
 	private void addBreakableIceFloor() {
 		int MatrixWidth = this.JsonGameMatrix.getMatrixWidth();
 		int MatrixHeight = this.JsonGameMatrix.getMatrixHeight();
@@ -66,7 +74,9 @@ public class IceClimberGame {
 		}
 		
 	}
-	
+	/**
+	 * 
+	 */
 	private void addYetis() {
 
 		
@@ -96,7 +106,9 @@ public class IceClimberGame {
 		}
 		
 	}
-	
+	/**
+	 * 
+	 */
 	private void addBirds() {
 		
 		int MatrixWidth = this.JsonGameMatrix.getMatrixWidth();
@@ -120,7 +132,9 @@ public class IceClimberGame {
 		
 		
 	}
-	
+	/**
+	 * 
+	 */
 	private void addPopo() {
 		int MatrixWidth = this.JsonGameMatrix.getMatrixWidth();
 				
@@ -140,7 +154,9 @@ public class IceClimberGame {
 		
 		
 	}
-	
+	/**
+	 * 
+	 */
 	private void addNana() {
 		int MatrixWidth = this.JsonGameMatrix.getMatrixWidth();
 				
@@ -158,7 +174,9 @@ public class IceClimberGame {
 	
 	
 	
-	
+	/**
+	 * 
+	 */
 	public void moveNPCs() {
 		
 		
@@ -167,7 +185,9 @@ public class IceClimberGame {
 		
 		
 	}
-	
+	/**
+	 * 
+	 */
 	private void moveYetis() {
 		List<coordinates> yetiList = new ArrayList<coordinates>();
 		yetiList = this.JsonGameMatrix.GetCoordinatesOfElements(2);
@@ -192,12 +212,17 @@ public class IceClimberGame {
 		
 		
 	}
-	
+	/**
+	 * 
+	 */
 	private void moveBird() {
 	}
 	
 	
-	
+	/**
+	 * 
+	 * @param theJsonMessage
+	 */
 	public void actionPopoAndNana(String theJsonMessage) {
 		this.clientJReader.insertClientMessage(theJsonMessage);
 		
@@ -214,7 +239,12 @@ public class IceClimberGame {
 			this.seeXmov(5, this.clientJReader.seeXmovment(5));
 		
 	}
-	
+	/**
+	 * 
+	 * @param personaje
+	 * @param orientacion
+	 * @param orden
+	 */
 	private void seeAttack(int personaje, int orientacion, int orden) {
 		List<coordinates> person = new ArrayList<coordinates>();
 		if(orden == 0) {}else {
@@ -260,7 +290,11 @@ public class IceClimberGame {
 		
 		
 	}
-	
+	/**
+	 * 
+	 * @param personaje
+	 * @param mov
+	 */
 	private void seeYmov(int personaje, int mov) {
 		
 		
@@ -302,7 +336,11 @@ public class IceClimberGame {
 		
 		
 	
-	
+	/**
+	 * 
+	 * @param personaje
+	 * @param mov
+	 */
 	private void seeXmov(int personaje, int mov) {
 		
 		
@@ -343,7 +381,10 @@ public class IceClimberGame {
 	}
 	
 	
-	
+	/**
+	 * 
+	 * @return
+	 */
 	public String getJsonMatrix() {
 		
 		return this.JsonGameMatrix.getGameMatrix().toString() ;

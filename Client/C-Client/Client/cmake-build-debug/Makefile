@@ -48,10 +48,10 @@ RM = /snap/clion/92/bin/cmake/linux/bin/cmake -E remove -f
 EQUALS = =
 
 # The top-level source directory on which CMake was run.
-CMAKE_SOURCE_DIR = /home/farid/Documents/LenguajesProgs/iCEclimber/iCEclimber/Client/C-Client/Client
+CMAKE_SOURCE_DIR = /home/zuckerberg/Desktop/iCEclimber/Client/C-Client/Client
 
 # The top-level build directory on which CMake was run.
-CMAKE_BINARY_DIR = /home/farid/Documents/LenguajesProgs/iCEclimber/iCEclimber/Client/C-Client/Client/cmake-build-debug
+CMAKE_BINARY_DIR = /home/zuckerberg/Desktop/iCEclimber/Client/C-Client/Client/cmake-build-debug
 
 #=============================================================================
 # Targets provided globally by CMake.
@@ -80,9 +80,9 @@ edit_cache/fast: edit_cache
 
 # The main all target
 all: cmake_check_build_system
-	$(CMAKE_COMMAND) -E cmake_progress_start /home/farid/Documents/LenguajesProgs/iCEclimber/iCEclimber/Client/C-Client/Client/cmake-build-debug/CMakeFiles /home/farid/Documents/LenguajesProgs/iCEclimber/iCEclimber/Client/C-Client/Client/cmake-build-debug/CMakeFiles/progress.marks
+	$(CMAKE_COMMAND) -E cmake_progress_start /home/zuckerberg/Desktop/iCEclimber/Client/C-Client/Client/cmake-build-debug/CMakeFiles /home/zuckerberg/Desktop/iCEclimber/Client/C-Client/Client/cmake-build-debug/CMakeFiles/progress.marks
 	$(MAKE) -f CMakeFiles/Makefile2 all
-	$(CMAKE_COMMAND) -E cmake_progress_start /home/farid/Documents/LenguajesProgs/iCEclimber/iCEclimber/Client/C-Client/Client/cmake-build-debug/CMakeFiles 0
+	$(CMAKE_COMMAND) -E cmake_progress_start /home/zuckerberg/Desktop/iCEclimber/Client/C-Client/Client/cmake-build-debug/CMakeFiles 0
 .PHONY : all
 
 # The main clean target
@@ -123,32 +123,32 @@ Client/fast:
 	$(MAKE) -f CMakeFiles/Client.dir/build.make CMakeFiles/Client.dir/build
 .PHONY : Client/fast
 
-json.o: json.c.o
+cJSON.o: cJSON.c.o
 
-.PHONY : json.o
+.PHONY : cJSON.o
 
 # target to build an object file
-json.c.o:
-	$(MAKE) -f CMakeFiles/Client.dir/build.make CMakeFiles/Client.dir/json.c.o
-.PHONY : json.c.o
+cJSON.c.o:
+	$(MAKE) -f CMakeFiles/Client.dir/build.make CMakeFiles/Client.dir/cJSON.c.o
+.PHONY : cJSON.c.o
 
-json.i: json.c.i
+cJSON.i: cJSON.c.i
 
-.PHONY : json.i
+.PHONY : cJSON.i
 
 # target to preprocess a source file
-json.c.i:
-	$(MAKE) -f CMakeFiles/Client.dir/build.make CMakeFiles/Client.dir/json.c.i
-.PHONY : json.c.i
+cJSON.c.i:
+	$(MAKE) -f CMakeFiles/Client.dir/build.make CMakeFiles/Client.dir/cJSON.c.i
+.PHONY : cJSON.c.i
 
-json.s: json.c.s
+cJSON.s: cJSON.c.s
 
-.PHONY : json.s
+.PHONY : cJSON.s
 
 # target to generate assembly for a file
-json.c.s:
-	$(MAKE) -f CMakeFiles/Client.dir/build.make CMakeFiles/Client.dir/json.c.s
-.PHONY : json.c.s
+cJSON.c.s:
+	$(MAKE) -f CMakeFiles/Client.dir/build.make CMakeFiles/Client.dir/cJSON.c.s
+.PHONY : cJSON.c.s
 
 main.o: main.c.o
 
@@ -186,9 +186,9 @@ help:
 	@echo "... rebuild_cache"
 	@echo "... Client"
 	@echo "... edit_cache"
-	@echo "... json.o"
-	@echo "... json.i"
-	@echo "... json.s"
+	@echo "... cJSON.o"
+	@echo "... cJSON.i"
+	@echo "... cJSON.s"
 	@echo "... main.o"
 	@echo "... main.i"
 	@echo "... main.s"

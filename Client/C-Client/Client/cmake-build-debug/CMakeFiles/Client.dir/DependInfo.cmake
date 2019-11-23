@@ -4,8 +4,8 @@ set(CMAKE_DEPENDS_LANGUAGES
   )
 # The set of files for implicit dependencies of each language:
 set(CMAKE_DEPENDS_CHECK_C
-  "/home/farid/Documents/LenguajesProgs/iCEclimber/iCEclimber/Client/C-Client/Client/json.c" "/home/farid/Documents/LenguajesProgs/iCEclimber/iCEclimber/Client/C-Client/Client/cmake-build-debug/CMakeFiles/Client.dir/json.c.o"
-  "/home/farid/Documents/LenguajesProgs/iCEclimber/iCEclimber/Client/C-Client/Client/main.c" "/home/farid/Documents/LenguajesProgs/iCEclimber/iCEclimber/Client/C-Client/Client/cmake-build-debug/CMakeFiles/Client.dir/main.c.o"
+  "/home/zuckerberg/Desktop/iCEclimber/Client/C-Client/Client/cJSON.c" "/home/zuckerberg/Desktop/iCEclimber/Client/C-Client/Client/cmake-build-debug/CMakeFiles/Client.dir/cJSON.c.o"
+  "/home/zuckerberg/Desktop/iCEclimber/Client/C-Client/Client/main.c" "/home/zuckerberg/Desktop/iCEclimber/Client/C-Client/Client/cmake-build-debug/CMakeFiles/Client.dir/main.c.o"
   )
 set(CMAKE_C_COMPILER_ID "GNU")
 

@@ -1,7 +1,3 @@
-
-
-
-
 #include <stdio.h>
 #include <stdlib.h>
 #include <string.h>
@@ -10,15 +6,16 @@
 #include <netinet/in.h>
 #include <arpa/inet.h>
 #include <stdbool.h>
-#include "json.c"
-#include <json-c/json.h>
-#include <json_object_private.h>
+#include "cJSON.h"
 
 #define PORT 8080
 
 char str[4];
 
-
+/**
+ *
+ * @param str
+ */
 void removeSpaces(char *str)
 {
     // To keep track of non-space character count
@@ -33,6 +30,10 @@ void removeSpaces(char *str)
     str[count] = '\0';
 }
 
+/**
+ *
+ * @param str
+ */
 void removeBackSlash(char *str)
 {
     // To keep track of non-space character count
@@ -47,192 +48,130 @@ void removeBackSlash(char *str)
     str[count] = '\0';
 }
 
-
-
-
-json_object* createJson(int x1, int y1, int attack1, int vision1, int x2, int y2, int attack2, int vision2) {
-
-    /*Creating a json object*/
-    json_object * jobj = json_object_new_object();
-
-/*Creating a json object*/
-
-    json_object * jobj1 = json_object_new_object();
-
-/*Creating a json integer*/
-
-    json_object *jint1 = json_object_new_int(attack1);
-
-    /*Form the json object*/
-
-    json_object_object_add(jobj1,"at", jint1);
-
-    /*Creating a json integer*/
-
-    json_object *jint2 = json_object_new_int(x1);
-
-    /*Form the json object*/
-
-    json_object_object_add(jobj1,"equis", jint1);
-
-    /*Creating a json object*/
-
-
-    json_object *jint3 = json_object_new_int(y1);
-
-    /*Form the json object*/
-
-    json_object_object_add(jobj1,"ye", jint1);
-
-
-    /*Creating a json integer*/
-
-    json_object *jint4 = json_object_new_int(vision1);
-
-    /*Form the json object*/
-
-    json_object_object_add(jobj1,"vis", jint1);
-
-
-    /*Creating a json array*/
-
-    json_object *jarray1 = json_object_new_array();
-
-    /*Creating json strings*/
-
-    json_object *jstring1 = json_object_new_string(json_object_to_json_string(jobj1));
-
-    /*Adding the above created json strings to the array*/
-
-    json_object_array_add(jarray1,jstring1);
-
-
-    /*Creating a json object*/
-
-    json_object * jobj2 = json_object_new_object();
-
-    /*Creating a json integer*/
-
-    json_object *jint5 = json_object_new_int(attack2);
-
-    /*Form the json object*/
-
-    json_object_object_add(jobj2,"at", jint5);
-
-
-    /*Creating a json integer*/
-
-    json_object *jint6 = json_object_new_int(x2);
-
-    /*Form the json object*/
-
-    json_object_object_add(jobj2,"equis", jint6);
-
-
-    /*Creating a json integer*/
-
-    json_object *jint7 = json_object_new_int(y2);
-
-    /*Form the json object*/
-
-    json_object_object_add(jobj2,"ye", jint7);
-
-
-    /*Creating a json integer*/
-
-    json_object *jint8 = json_object_new_int(vision2);
-
-    /*Form the json object*/
-
-    json_object_object_add(jobj2,"vis", jint8);
-
-    json_object *jarray2 = json_object_new_array();
-
-
-    /*Creating json strings*/
-
-    json_object *jstring5 = json_object_new_string(json_object_to_json_string(jobj2));
-
-    /*Adding the above created json strings to the array*/
-
-    json_object_array_add(jarray2,jstring5);
-
-    json_object_object_add(jobj, "4", jarray1);
-    json_object_object_add(jobj, "5", jarray2);
-
-    return jobj;
+/**
+ *
+ * @param x1
+ * @param y1
+ * @param att1
+ * @param vis1
+ * @param x2
+ * @param y2
+ * @param att2
+ * @param vis2
+ * @return
+ */
+char* generateJson(int x1, int y1, int att1, int vis1, int x2, int y2, int att2, int vis2) {
+    char* out;
+    cJSON* root;
+    cJSON* nana;
+    cJSON* popo;
+    cJSON* array4;
+    cJSON* array5;
+    root = cJSON_CreateObject();
+    array4 = cJSON_CreateArray();
+    array5 = cJSON_CreateArray();
+    cJSON_AddItemToObject(root, "4", array4);
+    cJSON_AddItemToObject(root, "5", array5);
+    cJSON_AddItemToArray(array4, popo = cJSON_CreateObject());
+    cJSON_AddItemToObject(popo, "att", cJSON_CreateNumber(att1));
+    cJSON_AddItemToObject(popo, "equis", cJSON_CreateNumber(x1));
+    cJSON_AddItemToObject(popo, "ye", cJSON_CreateNumber(y1));
+    cJSON_AddItemToObject(popo, "vis", cJSON_CreateNumber(vis1));
+    cJSON_AddItemToArray(array5, nana = cJSON_CreateObject());
+    cJSON_AddItemToObject(nana, "att", cJSON_CreateNumber(att2));
+    cJSON_AddItemToObject(nana, "equis", cJSON_CreateNumber(x2));
+    cJSON_AddItemToObject(nana, "ye", cJSON_CreateNumber(y2));
+    cJSON_AddItemToObject(nana, "vis", cJSON_CreateNumber(vis2));
+    out = cJSON_Print(root);
+    cJSON_Delete(root);
+    return out;
 }
 
-
-int* parse_json_pos(json_object* jobj, char* str) {
-  int arr[2] = [];
-  enum json_type type;
-  json_object_object_foreach(jobj, key, val) {
-    if (key == str) {
-      json_object_object_foreach(json_object_new_object(val), key, val) {
-        type = json_object_get_type(val);
-        switch (type) {
-          case json_type_array:
-          if (key == "equis") {
-            arr[0] = json_object_get_int(val);
-          } else if (key == "ye") {
-            arr[1] = json_object_get_int(val);
-          }
-          break;
-        }
-      }
-    }
-  }
-  return arr;
+/**
+ *
+ * @param in
+ * @param key
+ * @return
+ */
+int* getPos(char* in, char* key) {
+    cJSON* root = cJSON_Parse(in);
+    cJSON* x;
+    cJSON* y;
+    static int arr[2];
+    cJSON* item = cJSON_GetObjectItem(root, key);
+    cJSON* subitem = cJSON_GetArrayItem(item, 0);
+    x = cJSON_GetObjectItem(subitem, "equis");
+    y = cJSON_GetObjectItem(subitem, "ye");
+    arr[0] = x->valueint;
+    arr[1] = y->valueint;
+    cJSON_Delete(root);
+    return arr;
 }
 
+/**
+ *
+ * @param in
+ * @param x
+ * @param y
+ * @return
+ */
+int getEle(char* in, int x, int y) {
+int res;
+cJSON* root = cJSON_Parse(in);
+cJSON* cx;
+cJSON* cy;
+cJSON* item = cJSON_GetObjectItem(root, "4");
+cJSON* subitem = cJSON_GetArrayItem(item, 0);
+cx = cJSON_GetObjectItem(subitem, "equis");
+cy = cJSON_GetObjectItem(subitem, "ye");
+if (x == cx->valueint && y == cy->valueint) {
+    res = strtol("4", NULL, 0);
+    return res;
+} else {
+    return 0;
+}
+}
 
 void main(){
 
 
 
 
-    int clientSocket;
-    struct sockaddr_in serverAddr;
-    char buffer[1025];
+int clientSocket;
+struct sockaddr_in serverAddr;
+char buffer[1025];
 
-    clientSocket = socket(PF_INET, SOCK_STREAM, 0);
-    printf("[+]Client Socket Created Sucessfully.\n");
+clientSocket = socket(PF_INET, SOCK_STREAM, 0);
+printf("[+]Client Socket Created Sucessfully.\n");
 
-    memset(&serverAddr, '\0', sizeof(serverAddr));
-    serverAddr.sin_family = AF_INET;
-    serverAddr.sin_port = htons(PORT);
-    serverAddr.sin_addr.s_addr = inet_addr("127.0.0.1");
+memset(&serverAddr, '\0', sizeof(serverAddr));
+serverAddr.sin_family = AF_INET;
+serverAddr.sin_port = htons(PORT);
+serverAddr.sin_addr.s_addr = inet_addr("127.0.0.1");
 
-    connect(clientSocket, (struct sockaddr*)&serverAddr, sizeof(serverAddr));
-    printf("[+]Connected to Server.\n");
+connect(clientSocket, (struct sockaddr*)&serverAddr, sizeof(serverAddr));
+printf("[+]Connected to Server.\n");
 
-    int loop = 0;
+int loop = 0;
 
-    while (loop != 4) {
-        json_object* jobj = createJson( 0, 0, 0, 0,0, 0, 0, 0);
-
-        char sendbuffer[86];   // array to hold the result.
-        strcpy(sendbuffer,json_object_to_json_string_ext(jobj,JSON_C_TO_STRING_PLAIN )); // copy string one into the result.
-        strcat(sendbuffer,"\r\n");
-        removeSpaces(sendbuffer);
-        removeBackSlash(sendbuffer);
+while (loop != 4) {
+    const char* jobj = generateJson( 0, 0, 0, 0,0, 0, 0, 0);
 
 
 
-        // send_all_data function sends al data available
-        int was_it_all = send(clientSocket, sendbuffer, 86, 0);
+    // send_all_data function sends al data available
+    int was_it_all = send(clientSocket, jobj, 86, 0);
 
 
-        //recv recives all data from client
-        recv(clientSocket, buffer, 1025, 0);
-        printf("[+]Data Recv: %s\n",buffer );
+    //recv recives all data from client
+    recv(clientSocket, buffer, 1025, 0);
+    printf("[+]Data Recv: %s\n",buffer );
 
 
-        loop ++;
-    }
+    loop ++;
+}
 
 
-    printf("[+]Closing the connection.\n");
+printf("[+]Closing the connection.\n");
 
 }

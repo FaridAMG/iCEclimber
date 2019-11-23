@@ -8,11 +8,16 @@ import org.json.simple.parser.ParseException;
 public class ClientJsonReader {
 	
 	JSONObject ClientJson = new JSONObject();
-
+	/**
+	 * 
+	 */
 	public ClientJsonReader() {
 		super();
 	}
-	
+	/**
+	 * 
+	 * @param theJsonMessage
+	 */
 	public void insertClientMessage(String theJsonMessage) {
 		JSONParser parser = new JSONParser();
 		
@@ -26,7 +31,11 @@ public class ClientJsonReader {
 		
 	}
 	
-	
+	/**
+	 * 
+	 * @param popoONana
+	 * @return
+	 */
 	public int seeAtack(int popoONana) {
 		
 			JSONArray sujeto = new JSONArray();
@@ -39,7 +48,11 @@ public class ClientJsonReader {
 			return acc;	
 		
 			}
-
+	/**
+	 * 
+	 * @param popoONana
+	 * @return
+	 */
 	public int seeYmovment(int popoONana) {
 		
 		JSONArray sujeto = new JSONArray();
@@ -52,7 +65,11 @@ public class ClientJsonReader {
 		return acc;	
 		
 	}
-	
+	/**
+	 * 
+	 * @param popoONana
+	 * @return
+	 */
 	public int seeXmovment(int popoONana) {
 		
 		JSONArray sujeto = new JSONArray();
@@ -64,7 +81,11 @@ public class ClientJsonReader {
 		int acc = (int)(long) acciones.get("equis");
 		return acc;	
 	}
-	
+	/**
+	 * 
+	 * @param popoONana
+	 * @return
+	 */
 	public int seeVision(int popoONana) {
 		JSONArray sujeto = new JSONArray();
 		JSONObject acciones = new JSONObject();

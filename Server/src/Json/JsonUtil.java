@@ -14,7 +14,11 @@ import org.json.simple.parser.JSONParser;
 import org.json.simple.parser.ParseException;
 import java.io.FileWriter;
 import java.io.IOException;
-
+/**
+ * 
+ * @author zuckerberg
+ *
+ */
 public class JsonUtil  {
 	
 	// GameMatrix Variables
@@ -24,7 +28,11 @@ public class JsonUtil  {
 
 	int xpos;
 	int ypos;
-	
+	/**
+	 * 
+	 * @param xpos
+	 * @param ypos
+	 */
 	public JsonUtil(int xpos, int ypos) {
 		super();
 		this.xpos = xpos;
@@ -32,21 +40,32 @@ public class JsonUtil  {
 		createTemplate();
 	}
 	
-	
+	/**
+	 * 
+	 * @return
+	 */
 	public JSONObject getGameMatrix() {
 		return GameMatrix;
 	}
 
-	
+	/**
+	 * 
+	 * @return
+	 */
 	public int getMatrixWidth() {
 		return xpos;
 	}
-
+	/**
+	 * 
+	 * @return
+	 */
 	public int getMatrixHeight() {
 		return ypos;
 	}
 	
-	
+	/**
+	 * 
+	 */
 	private void createTemplate() {
 		for(int x=0;x!=this.xpos; x++) {
 	        JSONArray list = new JSONArray();
@@ -61,7 +80,12 @@ public class JsonUtil  {
 		}
 		
 	}
-	
+	/**
+	 * 
+	 * @param xpos
+	 * @param ypos
+	 * @return
+	 */
 	public int GetElementInPos(int xpos, int ypos) {
 		
 		if((xpos <= this.xpos || xpos >=0) & (ypos <= this.ypos || ypos >=0)) {
@@ -79,7 +103,12 @@ public class JsonUtil  {
 			
 	}
 	
-	
+	/**
+	 * 
+	 * @param xpos
+	 * @param ypos
+	 * @param newElement
+	 */
 	public void ChangeElementInPos(int xpos, int ypos, int newElement) {
 		
 		if((xpos <= this.xpos || xpos >=0) & (ypos <= this.ypos || ypos >=0)) {
@@ -93,7 +122,11 @@ public class JsonUtil  {
 		}
 			
 	}
-	
+	/**
+	 * 
+	 * @param element
+	 * @return
+	 */
 	public boolean doesElementExist(int element) {
 		List<coordinates> ele = new ArrayList<coordinates>();
 		ele = this.GetCoordinatesOfElements(element);
@@ -105,7 +138,11 @@ public class JsonUtil  {
 		}
 		
 	}
-	
+	/**
+	 * 
+	 * @param element
+	 * @return
+	 */
 	public List<coordinates> GetCoordinatesOfElements(int element) {
 		List<coordinates> ele = new ArrayList<coordinates>();
 		JSONArray ex = new JSONArray();
@@ -133,7 +170,9 @@ public class JsonUtil  {
 	}
 	
 	 
-	
+	/**
+	 * 
+	 */
 	public void ConsolePrintGameMatrix() {
 		System.out.println(this.GameMatrix);
 	}
